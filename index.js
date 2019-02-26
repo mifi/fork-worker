@@ -1,4 +1,4 @@
-const childProcess = window.require('child_process');
+const childProcess = require('child_process');
 
 export default (modulePath, message, timeout, forkOpts = {}) => {
   const { args, options } = forkOpts;
