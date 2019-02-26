@@ -1,0 +1,16 @@
+{
+  "name": "fork-worker",
+  "version": "1.0.0",
+  "description": "Makes it easier to fork off a separate Node.js job",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mifi/fork-worker.git"
+  },
+  "homepage": "https://github.com/mifi/ical-expander",
+  "author": "Mikael Finstad <finstaden@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  }
+}
