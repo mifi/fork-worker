@@ -1,6 +1,6 @@
 const childProcess = require('child_process');
 
-export default (modulePath, message, timeout, forkOpts = {}) => {
+module.exports = (modulePath, message, timeout, forkOpts = {}) => {
   const { args, options } = forkOpts;
   let cp;
 
