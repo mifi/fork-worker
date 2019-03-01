@@ -1,12 +1,14 @@
 const childProcess = require('child_process');
 
-module.exports = (modulePath, message, timeout, forkOpts = {}) => {
-  const { args, options } = forkOpts;
+module.exports = (modulePath, { message, timeout, args = [], options } = {}) => {
   let cp;
+  try {
+    cp = childProcess.fork(modulePath, args, options);
+  } catch (err) {
+    return Promise.reject(err);
+  }
 
   const promise = new Promise((resolve, reject) => {
-    cp = childProcess.fork(modulePath, args, options);
-
     let haveReturned = false;
     let timeoutRef;
 
