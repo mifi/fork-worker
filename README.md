@@ -1,5 +1,7 @@
 # fork-worker
 
+Unmaintained: Use something like [workerpool](https://github.com/josdejong/workerpool) instead.
+
 Makes it easier to fork off a separate Node.js worker with a heavy job or some code you don't trust the stability of (maybe a high risk of crashing the whole node process, like a native module). `fork-worker` lets you run a js file outside the calling process (uses `child_process.fork` internally). It will make sure that the process is killed when done, and returns a promise for ease of use.
 
 ## Install
